@@ -1,18 +1,19 @@
+// Numerical Analysis of 5 Methods
+// Programmer - Shivam Sharma
+
 #include <iostream>
 #include <math.h>
-
-
 using namespace std;
 
 
 // the Euler constant
-const double e		= 2.718281828459;
+const double e = 2.718281828459;
 
 // the maximum number of iterations
-const int MAXITER	= 100;
+const int MAXITER = 100;
 
 // the accepted error
-const double error	= 0.0001;
+const double error = 0.0001;
 
 // matrix used in Overholt algorithm
 // this is declared as a global variable to avoid stack overflow
@@ -20,13 +21,13 @@ double V[100][100];
 
 
 // the function F(x)
-#define F(x) (  x * pow(e, x) - 1  )
+#define F(x) (x * pow(e, x) - 1)
 
 // the derivative of the function F(x), meaning F`(x)
-#define Fd(x) (  (x + 1) * pow(e, x)  )
+#define Fd(x) ((x + 1) * pow(e, x))
 
 // the function used in successive approximations method
-#define F1(x) ( pow(e, -x) )
+#define F1(x) (pow(e, -x))
 
 
 /* 
@@ -36,17 +37,15 @@ double V[100][100];
  * Return:
  * The number of iterations passed
  */
-int NewtonMethodForEquation(double& x)
+int NewtonMethodForEquation(double & x)
 {
 	int n = 1;
 
-	while( ( fabs(F(x)) > error ) && ( n <= MAXITER ) )
+	while((fabs(F(x)) > error) && (n <= MAXITER))
 	{
-		x = x - ( F(x) / Fd(x) );
-
+		x = x - (F(x) / Fd(x));
 		n++;
 	}
-
 
 	return n;
 }
@@ -66,7 +65,7 @@ int SecantMethodForEquation(double& x, double x0, double x1)
 {
 	int n = 2;
 
-	while( ( fabs(F(x1)) > error ) && ( n <= MAXITER ) )
+	while((fabs(F(x1)) > error) && (n <= MAXITER ))
 	{
 		x = x1 - (F(x1) * (x1 - x0)) / (F(x1) - F(x0));
 		x0 = x1;
@@ -74,7 +73,6 @@ int SecantMethodForEquation(double& x, double x0, double x1)
 
 		n++;
 	}
-
 
 	return n;
 }
@@ -182,7 +180,7 @@ int OverholtMethodForEquation(double &x, double x0, int s)
 			V[0][n] = F1(V[0][n - 1]);
 
 		for(int k = 0; k <= s - 2; k++)
-			for(int n = 0; n <= s - k - 2; n++)
+		for(int n = 0; n <= s - k - 2; n++)
 				V[k + 1][n] = (pow(V[0][n + k + 2] - V[0][n + k + 1], k+1) * V[k][n] - 
 							   pow(V[0][n + k + 1] - V[0][n + k], k + 1) * V[k][n + 1]) / 
 							  (pow(V[0][n + k + 2] - V[0][n + k + 1], k + 1) - 
