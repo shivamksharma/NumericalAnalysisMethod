@@ -65,7 +65,7 @@ xNxt = xCrt1 - (F(xCrt1)(xCrt1 - xCrt0)) / (F(xCrt1) - F(xCrt0))
 
 This Methos doesn't require the Derivatice of the Funtion F like Newton's Method. Code Down Below which Implements The Secant Method.
 
-```
+```C++
 /* 
  * Secant method for solving equation F(x) = 0
  * Input:
