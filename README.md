@@ -28,7 +28,7 @@ F` Denotes the Derivatice of the function F & The Iteration process stops when w
 
 Code Down Below which Implements The Newton's Method:
 
-```
+```C++
 /* 
  * Newton's method for solving equation F(x) = 0
  * Output: 
@@ -106,7 +106,7 @@ xNxt = F(xCrt)
 ```
 This is a pretty simple formula & against all odds, it has been proved that the method usually converges after a number of iterations, leading to a good approximation of the equation solution & the source code is pretty straightforward.
 
-```
+```C++
 /* 
  * Successive approximations method for solving equation F(x) = x
  * Output:
@@ -143,7 +143,7 @@ We present in the following section, three such algorithms for convergence accel
 
 Aitken's method is an iterative process similar to the ones presented. I won't go into the mathematical details again. Instead, I prefer to present the code for Aitken's method.
 
-```
+```C++
 /* 
  * Aitken's method for solving equation F(x) = x
  * Input:
@@ -192,7 +192,7 @@ xCrt = F(xCrt) + 1 / ((1 / (F(F(xCrt)) - F(xCrt))) - (1 / (F(xCrt) - xCrt)))
 
 The Code for The Algorithm is:
 
-```
+```C++
 /* 
  * Steffensen's method for solving equation F(x) = x
  * Output:
@@ -222,7 +222,7 @@ int SteffensenMethodForEquation(double& x)
 
 Overholt's method is the fastest method for solving the equation F(x) = x. I'm going to present the code for the algorithm, the method itself being pretty straightforward from the source code:
 
-```
+```C++
 /* 
  * Overholt's method for solving equation F(x) = x
  * Input:
@@ -280,7 +280,7 @@ Now, let's see how to effectively use the methods described above, and on the wa
 
 In order to use the methods, we must first define some constants:
 
-```
+```C++
 // the maximum number of iterations
 const int MAXITER    = 100;
 
@@ -292,7 +292,7 @@ MAXITER represents the maximum number of iterations an algorithm is permitted to
 
 Let's take an example equation of the first kind, for instance, x*e^x - 1 = 0. So, we have F(x) = x*e^x - 1. We define the function in our code, and also its derivative, because we will need it in order to apply Newton's method:
 
-```
+```C++
 // the Euler constant
 const double e        = 2.718281828459;
 
@@ -305,7 +305,7 @@ const double e        = 2.718281828459;
 
 You can change the function F & its derivative Fd & you'll solve any kind of equation you like.
 
-```
+```C++
 double x;
 int n;
 
@@ -350,13 +350,13 @@ Now you can play with the algorithms, giving various initial approximations and 
 
 For the second type of equation, let's take, for example, F(x) = e^(-x), and the equation becomes e^(-x) = x.
 
-```
+```C++
 #define F1(x) ( pow(e, -x) )
 ```
 
 And Here is how we apply our algorithms:
 
-```
+```C++
 /* Example usage for Successive Approximations Method */
 cout << "Successive approximations method: " << endl << endl;
 
