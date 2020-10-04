@@ -1,6 +1,6 @@
 # **Numerical Analysis in Six Methods**
 
-In This Repository, I'm gonna show you'all on two famous equations in Mathematics which are of huge importance in almost every domain of Science F(x) = 0 & F(x) = x. Some of Equations Problems in Mathematics, Chemistry, Physics are reduced to solving one of these two quations & thats why Mathematicians/Scientists over time have tried hard to offer good solutions to resolve these equations. We'll go thorugh some of Numerical Methods that try to solve them & We'll try to make a short analysis of those Methods & also showing the advantages or disadvantages of every one of them.
+In This Repository, I'm gonna show you'all on six famous equations in Mathematics which are of huge importance in almost every domain of Science F(x) = 0 & F(x) = x. Some of Equations Problems in Mathematics, Chemistry, Physics are reduced to solving one of these two quations & thats why Mathematicians/Scientists over time have tried hard to offer good solutions to resolve these equations. We'll go thorugh some of Numerical Methods that try to solve them & We'll try to make a short analysis of those Methods & also showing the advantages or disadvantages of every one of them.
 
 
 
