@@ -4,7 +4,7 @@ In This Repository, I'm gonna show you'all on six famous equations in Mathematic
 
 
 
-Methods Whhich We'll Discuss On :
+Methods Which We'll Discuss On :
 
 - Newton's Method
 - Secant Method
@@ -422,7 +422,7 @@ else
          << n << " iterations" << endl;
 ```
 
-Try and play with these algorithms too, and you will see that, indeed, Overholt's method is a stable and fast method for solving equations of type F(x) = x.
+>Try and play with these algorithms
 
 
 
